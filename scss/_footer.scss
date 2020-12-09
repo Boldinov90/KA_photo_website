@@ -1,0 +1,77 @@
+.footer{
+    background-color: #29282F;
+    .footer__wrapper{
+        height: 111px;   
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @media screen and(max-width: 380px) {
+            height: 60px;   
+        }
+        .footer__logo-title{
+            font-family: Comfortaa;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 24px;
+            line-height: 27px;
+            color: #FFFFFF;
+            @media screen and(max-width: 380px) {
+                font-size: 14px;
+                line-height: 16px;
+            }
+        }
+        .footer__logo-police{
+            font-family: Comfortaa;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 10px;
+            line-height: 11px;
+            display: flex;
+            align-items: center;
+            text-transform: lowercase;           
+            color: #FFFFFF;
+            @media screen and(max-width: 380px) {
+                font-size: 8px;
+                line-height: 9px;
+            }
+        }
+    }
+    .footer__nav{
+        @media screen and(max-width: 800px) {
+            display: none;
+        }
+        .footer__nav-items-list{
+            display: flex;
+            .footer__nav-item{
+                list-style-type: none;
+                margin-right: 40px;
+                @media screen and(max-width: 870px) {
+                    margin-right: 25px;
+                }
+                &:last-child{
+                    margin-right: 0;
+                }
+                .footer__nav-link{
+                    font-family: Comfortaa;
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 16px;
+                    line-height: 18px;
+                    text-transform: uppercase;
+                    color: #FFFFFF;
+                    text-decoration: none;
+                    border-bottom: 1px solid #ffffff00;
+                    transition: 0.3s;
+                    @media screen and(max-width: 1000px) {
+                        font-size: 12px;
+                        line-height: 14px;
+                    }
+                    &:hover{
+                        border-bottom: 1px solid #FFFFFF;
+                        transition: 0.3s;
+                    }
+                }
+            }
+        }
+    }
+}
