@@ -19,7 +19,6 @@ $(document).ready(function(){
 			document.querySelector("#name").value = "";
 			document.querySelector("#phone").value = "";
 			document.querySelector("#checkbox").checked = false;
-
         }, 2500);
 	});
 });
