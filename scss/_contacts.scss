@@ -33,6 +33,7 @@
             padding: 30px;
             display: flex;
             flex-direction: column;
+            // display: none;
             @media screen and(max-width: 1024px) {
                 height: 380px;
                 width: 380px;
@@ -95,6 +96,8 @@
                 color: #626262;
                 border: none;
                 padding-left: 20px;
+                transition: 0.3s;
+
                 @media screen and(max-width: 1024px) {
                     width: 320px;
                     height: 44px;
@@ -179,6 +182,54 @@
                 background-color: #FFC27B;
                 color: #29282F;
                 transition: 0.3s;
+            }
+        }
+        .form__body-reaction{
+            grid-area: form;
+            width: 470px;
+            height: 450px;
+            background: #29282F;
+            border-radius: 8px;
+            padding: 60px;
+            display: flex;
+            flex-direction: column;
+            display: none;
+            transition: 0.3s;
+            @media screen and(max-width: 1024px) {
+                height: 380px;
+                width: 380px;
+                padding: 20px;
+            }
+            @media screen and(max-width: 750px) {
+                height: 315px;
+                width: 345px;     
+                padding: 15px;
+            }
+            @media screen and(max-width: 390px) {
+                width: 290px;     
+            }
+            .form__body-title{
+                text-align: center;
+                font-family: Comfortaa;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 24px;
+                line-height: 27px;                
+                color: #FFFFFF;
+                @media screen and(max-width: 1024px) {
+                    font-size: 18px;
+                    line-height: 20px;
+                }
+                @media screen and(max-width: 750px) {
+                    font-size: 14px;
+                    line-height: 16px;
+                }
+            } 
+            .form__body-reaction--icon{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100%;
             }
         }
         .contacts__content{

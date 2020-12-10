@@ -10,6 +10,16 @@ $(document).ready(function(){
 				$('.thanks').addClass('active');
 			}
 		});
-		// event.preventDefault();
+		event.preventDefault();
+		document.querySelector(".form__body").style.display = "none";
+		document.querySelector(".form__body-reaction").style.display = "flex";
+		setTimeout(() => {  
+			document.querySelector(".form__body").style.display = "flex";
+			document.querySelector(".form__body-reaction").style.display = "none";
+			document.querySelector("#name").value = "";
+			document.querySelector("#phone").value = "";
+			document.querySelector("#checkbox").checked = false;
+
+        }, 2500);
 	});
 });
