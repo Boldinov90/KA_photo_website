@@ -47,7 +47,7 @@ for(let anchor of anchors){
         const blockId = anchor.getAttribute("href");
         document.querySelector('' + blockId).scrollIntoView({
         behavior: "smooth",
-        block: "start" 
+        block: "center" 
         })
         mobileNavContainer.classList.remove('mobile-nav--active');
         document.querySelector('body').classList.remove("no-scroll");
