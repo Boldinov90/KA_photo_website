@@ -54,11 +54,11 @@
                 }
                 @media screen and(max-width: 1180px) {
                     width: 300px;
-                    height: 400px;
+                    min-height: 400px;
                 }
                 @media screen and(max-width: 950px) {
                     width: 255px;
-                    height: 360px;
+                    min-height: 360px;
                 }
                 .card__title {
                     font-family: Montserrat;

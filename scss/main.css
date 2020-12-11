@@ -898,14 +898,14 @@ body {
 @media screen and (max-width: 1180px) {
   .prices .prices__slider-wrapper .prices-slider .card {
     width: 300px;
-    height: 400px;
+    min-height: 400px;
   }
 }
 
 @media screen and (max-width: 950px) {
   .prices .prices__slider-wrapper .prices-slider .card {
     width: 255px;
-    height: 360px;
+    min-height: 360px;
   }
 }
 
