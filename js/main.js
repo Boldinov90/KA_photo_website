@@ -13,7 +13,6 @@ menuToggle.onclick = function() {
 window.onscroll = function() {
     let lastScrollTop = 0;
     window.onscroll = onScroll;
-
     function onScroll(e) {
         let top = window.pageYOffset;
         const header = document.querySelector(".header__top-wrapper");
