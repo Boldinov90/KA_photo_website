@@ -95,7 +95,7 @@ document.querySelector('.portfolio__btn-back').addEventListener("click", functio
     document.querySelector('.portfolio__btn-back').classList.add("hidden-btn");
     document.getElementById("portfolio").scrollIntoView({
         behavior: "smooth",
-        block: "start" 
+        block: "center" 
         });
 });
 
