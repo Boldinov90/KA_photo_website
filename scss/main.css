@@ -881,7 +881,7 @@ body {
 .prices .prices__slider-wrapper .prices-slider .card {
   width: 370px;
   min-height: 530px;
-  padding-bottom: 70px;
+  padding-bottom: 80px;
   background-color: #29282F;
   border-radius: 8px;
   display: flex;
@@ -1083,7 +1083,7 @@ body {
   align-items: center;
   align-self: center;
   position: absolute;
-  bottom: 20px;
+  bottom: 30px;
   cursor: pointer;
   transition: 0.3s;
 }
