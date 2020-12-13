@@ -106,9 +106,23 @@ body {
   position: relative;
   width: 100%;
   height: 100vh;
-  background-position: top;
   background-repeat: no-repeat;
-  background-size: cover;
+  animation: headerBackground 50s infinite;
+}
+
+@keyframes headerBackground {
+  from {
+    background-position: left top;
+    background-size: 100%;
+  }
+  50% {
+    background-size: 120%;
+    background-position: right top;
+  }
+  to {
+    background-position: left top;
+    background-size: 100%;
+  }
 }
 
 .header .header__bg-thin {
@@ -441,6 +455,30 @@ body {
     opacity: 0;
     top: -100px;
   }
+}
+
+.header .header__scroll-arrow-wrapper {
+  position: absolute;
+  bottom: 50px;
+  right: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.header .header__scroll-arrow-wrapper .header__scroll-circle {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: rgba(53, 55, 62, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header .header__scroll-arrow-wrapper .header__scroll-circle .header__scroll-img {
+  width: 50px;
 }
 
 .portfolio {
