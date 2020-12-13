@@ -231,3 +231,44 @@ $(document).ready(function() {
     });
 });
 
+// ================    Функция отправки данных из формы на почту     ====================
+// ======================================================================================
+$(document).ready(function(){
+	$("form").submit(function() { // Событие отправки с формы
+		var form_data = $(this).serialize(); // Собираем данные из полей
+		$.ajax({
+			type: "POST", // Метод отправки
+			url: "sendform.php", // Путь к PHP обработчику sendform.php
+			data: form_data,
+			success: function() {
+				$('.popup').addClass('active');
+				$('.thanks').addClass('active');
+			}
+		});
+		event.preventDefault();
+		document.querySelector(".form__body").style.display = "none";
+		document.querySelector(".form__body-reaction").style.display = "flex";
+		setTimeout(() => {  
+			document.querySelector(".form__body").style.display = "flex";
+			document.querySelector(".form__body-reaction").style.display = "none";
+			document.querySelector("#name").value = "";
+			document.querySelector("#phone").value = "";
+			document.querySelector("#checkbox").checked = false;
+        }, 2500);
+	});
+});
+
+
+// ================    Функция перенаправления кнопки заказать на форму обратной связи     ====================
+// ============================================================================================================
+const btns = document.querySelectorAll('.card__btn-order');
+let btn;
+for(btn of btns){
+    btn.addEventListener("click", function(event){
+        event.preventDefault();
+        document.querySelector("#contacts").scrollIntoView({
+            behavior: "smooth",
+            block: "center" 
+        });
+    });
+};
