@@ -43,17 +43,13 @@ window.onscroll = function() {
 // ======================================================================================
 
 function thinHeaderWhenLoad(){
-    let header = document.querySelector(".header__top-wrapper");
+    // let header = document.querySelector(".header__top-wrapper");
     if (window.pageYOffset > 200) {
-        console.log('test')
-        header.style.cssText = "background-color: #29282ff6;";
-        // header.style.cssText = "background-color: #fff;";
-        // $('.header__top-wrapper').css('background', '#29282ff6');
+        // console.log('test')
+        document.querySelector(".header__top-wrapper").style.cssText = "background-color: #29282ff6;";
     }
-    // thinHeaderWhenLoad();
-
 }
-// thinHeaderWhenLoad();
+
 
 
 // =========== Навигация по сайту =============
