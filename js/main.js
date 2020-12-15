@@ -39,20 +39,20 @@ window.onscroll = function() {
 
 // =========== Навигация по сайту =============
 // ======================================================================================
-const anchors = document.querySelectorAll('a[href*= "#"]')
-for(let anchor of anchors){
-    anchor.addEventListener("click", function(event){
-        event.preventDefault();
-        const blockId = anchor.getAttribute("href");
-        document.querySelector('' + blockId).scrollIntoView({
-        behavior: "smooth",
-        block: "center" 
-        })
-        mobileNavContainer.classList.remove('mobile-nav--active');
-        document.querySelector('body').classList.remove("no-scroll");
-        menuToggle.classList.remove('menu-icon-active');
-    })
-}
+// const anchors = document.querySelectorAll('a[href*= "#"]')
+// for(let anchor of anchors){
+//     anchor.addEventListener("click", function(event){
+//         event.preventDefault();
+//         const blockId = anchor.getAttribute("href");
+//         document.querySelector('' + blockId).scrollIntoView({
+//         behavior: "smooth",
+//         block: "center" 
+//         })
+//         mobileNavContainer.classList.remove('mobile-nav--active');
+//         document.querySelector('body').classList.remove("no-scroll");
+//         menuToggle.classList.remove('menu-icon-active');
+//     })
+// }
 
 // ===============  Подключение сортировки элементов в галерее по клику меню ============
 // ======================================================================================
@@ -261,24 +261,24 @@ $(document).ready(function(){
 
 // ================    Функция перенаправления кнопки заказать на форму обратной связи     ====================
 // ============================================================================================================
-const btns = document.querySelectorAll('.card__btn-order');
-let btn;
-for(btn of btns){
-    btn.addEventListener("click", function(event){
-        event.preventDefault();
-        document.querySelector("#contacts").scrollIntoView({
-            behavior: "smooth",
-            block: "center" 
-        });
-    });
-};
+// const btns = document.querySelectorAll('.card__btn-order');
+// let btn;
+// for(btn of btns){
+//     btn.addEventListener("click", function(event){
+//         event.preventDefault();
+//         document.querySelector("#contacts").scrollIntoView({
+//             behavior: "smooth",
+//             block: "center" 
+//         });
+//     });
+// };
 
 // ================    Функция скролла вниз при нажатии на стрелку вниз     ====================
 // =============================================================================================
-document.querySelector('.header__scroll-circle').addEventListener("click", function(event){
-    event.preventDefault();
-    document.querySelector("#portfolio").scrollIntoView({
-        behavior: "smooth",
-        block: "center" 
-    });
-});
+// document.querySelector('.header__scroll-circle').addEventListener("click", function(event){
+//     event.preventDefault();
+//     document.querySelector("#portfolio").scrollIntoView({
+//         behavior: "smooth",
+//         block: "center" 
+//     });
+// });

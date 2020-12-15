@@ -1,9 +1,12 @@
 *, *::before, *::after {
   box-sizing: border-box;
+  scroll-behavior: smooth;
+
 }
 body{
     background-color: #35373E;
-    scroll-behavior: smooth;
+    // overflow-y: scroll;
+
 }
 .container-overflow{
     max-width: 1920px;
