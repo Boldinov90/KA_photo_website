@@ -42,11 +42,12 @@ window.onscroll = function() {
 // ============== функция определения цвета хедара при хагрузке страницы ================
 // ======================================================================================
 function thinHeaderWhenLoad(){
-    // const header = document.querySelector(".header__top-wrapper");
+    const header = document.querySelector(".header__top-wrapper");
     if (window.scrollY  > 200) {
         console.log('test')
         // header.style.cssText = "background-color: #29282ff6;";
-        $('.header__top-wrapper').css('background', '#29282ff6');
+        header.style.cssText = "background-color: #fff;";
+        // $('.header__top-wrapper').css('background', '#29282ff6');
     }
 }
 
