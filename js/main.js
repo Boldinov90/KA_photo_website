@@ -44,7 +44,7 @@ window.onscroll = function() {
 
 function thinHeaderWhenLoad(){
     // if (window.pageYOffset > 200) {
-        document.querySelector(".header__top-wrapper").style.cssText = "background-color: #29282ff6; transition: 0.5s;";
+        document.querySelector(".header__top-wrapper").style.cssText = "background-color: #29282ff6;";
     // }
 }
 
