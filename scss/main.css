@@ -455,7 +455,7 @@ body {
 
 @media screen and (max-width: 1024px) {
   .header .header__scroll-arrow-wrapper {
-    bottom: 120px;
+    bottom: 140px;
   }
 }
 
