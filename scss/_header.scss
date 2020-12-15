@@ -5,12 +5,7 @@
     height: 100vh;
     background-repeat: no-repeat;
     background-position: top;
-    // background-size: contain;
-
     background-size: cover;
- 
-    // background-size: 150%;
-    // background-position: 0px 70%;
     .header__bg-thin{
         position: absolute;
         top: 0;
@@ -188,11 +183,8 @@
                 overflow: auto;
                 transition-duration: 0.3s;
                 border-radius: 8px 0px 0px 8px;
-                // padding-top: 100px;
-                // padding-bottom: 50px;
                 .mobile-nav__list{
                     margin-top: 44px;
-                    // margin-top: 100px;
                     padding-left: 0;
                     margin-left: 15px;
                    .mobile-nav__item {
