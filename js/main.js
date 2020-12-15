@@ -42,9 +42,8 @@ window.onscroll = function() {
 // ============== функция определения цвета хедара при хагрузке страницы ================
 // ======================================================================================
 function thinHeaderWhenLoad(){
-    console.log("jhgjhgjhg", window.pageYOffset);
     const header = document.querySelector(".header__top-wrapper");
-    if (window.pageYOffset > 200) {
+    if (window.scrollY  > 200) {
         header.style.backgroundColor = "#29282ff6";
     }
 }
