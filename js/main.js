@@ -44,7 +44,7 @@ window.onscroll = function() {
 function thinHeaderWhenLoad(){
     const header = document.querySelector(".header__top-wrapper");
     if (window.scrollY  > 200) {
-        header.style.backgroundColor = "#29282ff6";
+        header.style.cssText = "background-color: #29282ff6;";
     }
 }
 
