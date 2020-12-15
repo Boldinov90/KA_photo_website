@@ -1,6 +1,6 @@
 // ============== Определение цвета хедара =====
 // =============================================
-thinHeaderWhenLoad();
+// thinHeaderWhenLoad();
 
 // ============== Меню "БУРГЕР" ================
 // =============================================
@@ -42,10 +42,14 @@ window.onscroll = function() {
 // ============== функция определения цвета хедара при хагрузке страницы ================
 // ======================================================================================
 
-function thinHeaderWhenLoad(){
-    if (window.scrollY !== 0) {
-        document.querySelector(".header__top-wrapper").style.cssText = "background-color: #29282ff6;";
-    }
+window.onload = function() { 
+    window.onload = onload(); 
+    function onload(e) { 
+        let top = window.pageYOffset; 
+        if (top > 200) { 
+            document.querySelector(".header__top-wrapper").style.cssText = "background-color: #29282ff6;"; 
+        } 
+    } 
 }
 
 
