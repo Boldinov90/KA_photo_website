@@ -453,6 +453,12 @@ body {
   justify-content: center;
 }
 
+@media screen and (max-width: 1024px) {
+  .header .header__scroll-arrow-wrapper {
+    bottom: 120px;
+  }
+}
+
 .header .header__scroll-arrow-wrapper .header__scroll-circle {
   width: 50px;
   height: 50px;
