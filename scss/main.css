@@ -5,6 +5,7 @@
 
 body {
   background-color: #35373E;
+  scroll-behavior: smooth;
 }
 
 .container-overflow {
