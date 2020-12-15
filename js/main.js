@@ -43,11 +43,9 @@ window.onscroll = function() {
 // ======================================================================================
 
 function thinHeaderWhenLoad(){
-    // let header = document.querySelector(".header__top-wrapper");
-    if (window.pageYOffset > 200) {
-        // console.log('test')
-        document.querySelector(".header__top-wrapper").style.cssText = "background-color: #29282ff6;";
-    }
+    // if (window.pageYOffset > 200) {
+        document.querySelector(".header__top-wrapper").style.cssText = "background-color: #29282ff6; transition: 0.5s;";
+    // }
 }
 
 
