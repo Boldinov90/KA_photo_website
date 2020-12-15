@@ -199,7 +199,7 @@ $(document).ready(function() {
                 margin: -500,
                 items: 1
             },
-            1024: {
+            1025: {
                 margin: -300,
                 items: 1
             },
@@ -272,3 +272,13 @@ for(btn of btns){
         });
     });
 };
+
+// ================    Функция скролла вниз при нажатии на стрелку вниз     ====================
+// =============================================================================================
+document.querySelector('.header__scroll-circle').addEventListener("click", function(event){
+    event.preventDefault();
+    document.querySelector("#portfolio").scrollIntoView({
+        behavior: "smooth",
+        block: "center" 
+    });
+});
