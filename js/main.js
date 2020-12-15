@@ -41,7 +41,8 @@ window.onscroll = function() {
 
 // ============== функция определения цвета хедара при хагрузке страницы ================
 // ======================================================================================
-window.onload = function(){
+
+function thinHeaderWhenLoad(){
     const header = document.querySelector(".header__top-wrapper");
     if (window.scrollY > 200) {
         console.log('test')
@@ -50,15 +51,6 @@ window.onload = function(){
         // $('.header__top-wrapper').css('background', '#29282ff6');
     }
 }
-// function thinHeaderWhenLoad(){
-//     const header = document.querySelector(".header__top-wrapper");
-//     if (window.scrollY > 200) {
-//         console.log('test')
-//         header.style.cssText = "background-color: #29282ff6;";
-//         // header.style.cssText = "background-color: #fff;";
-//         // $('.header__top-wrapper').css('background', '#29282ff6');
-//     }
-// }
 
 
 // =========== Навигация по сайту =============
