@@ -8,33 +8,37 @@
         @media screen and(max-width: 380px) {
             height: 60px;   
         }
-        .footer__logo-title{
-            font-family: Comfortaa;
-            font-style: normal;
-            font-weight: bold;
-            font-size: 24px;
-            line-height: 27px;
-            color: #FFFFFF;
-            @media screen and(max-width: 380px) {
-                font-size: 14px;
-                line-height: 16px;
+        .footer__logo{
+            text-decoration: none;
+            .footer__logo-title{
+                font-family: Comfortaa;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 24px;
+                line-height: 27px;
+                color: #FFFFFF;
+                @media screen and(max-width: 380px) {
+                    font-size: 14px;
+                    line-height: 16px;
+                }
+            }
+            .footer__logo-police{
+                font-family: Comfortaa;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 10px;
+                line-height: 11px;
+                display: flex;
+                align-items: center;
+                text-transform: lowercase;           
+                color: #FFFFFF;
+                @media screen and(max-width: 380px) {
+                    font-size: 8px;
+                    line-height: 9px;
+                }
             }
         }
-        .footer__logo-police{
-            font-family: Comfortaa;
-            font-style: normal;
-            font-weight: normal;
-            font-size: 10px;
-            line-height: 11px;
-            display: flex;
-            align-items: center;
-            text-transform: lowercase;           
-            color: #FFFFFF;
-            @media screen and(max-width: 380px) {
-                font-size: 8px;
-                line-height: 9px;
-            }
-        }
+
     }
     .footer__nav{
         @media screen and(max-width: 800px) {

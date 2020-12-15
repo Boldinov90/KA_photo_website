@@ -1773,7 +1773,11 @@ body {
   }
 }
 
-.footer .footer__wrapper .footer__logo-title {
+.footer .footer__wrapper .footer__logo {
+  text-decoration: none;
+}
+
+.footer .footer__wrapper .footer__logo .footer__logo-title {
   font-family: Comfortaa;
   font-style: normal;
   font-weight: bold;
@@ -1783,13 +1787,13 @@ body {
 }
 
 @media screen and (max-width: 380px) {
-  .footer .footer__wrapper .footer__logo-title {
+  .footer .footer__wrapper .footer__logo .footer__logo-title {
     font-size: 14px;
     line-height: 16px;
   }
 }
 
-.footer .footer__wrapper .footer__logo-police {
+.footer .footer__wrapper .footer__logo .footer__logo-police {
   font-family: Comfortaa;
   font-style: normal;
   font-weight: normal;
@@ -1802,7 +1806,7 @@ body {
 }
 
 @media screen and (max-width: 380px) {
-  .footer .footer__wrapper .footer__logo-police {
+  .footer .footer__wrapper .footer__logo .footer__logo-police {
     font-size: 8px;
     line-height: 9px;
   }

@@ -1,3 +1,7 @@
+// ============== Определение цвета хедара =====
+// =============================================
+thinHeaderWhenLoad();
+
 // ============== Меню "БУРГЕР" ================
 // =============================================
 const menuToggle = document.querySelector('#menu-toggle');
@@ -17,7 +21,6 @@ window.onscroll = function() {
         let top = window.pageYOffset;
         const header = document.querySelector(".header__top-wrapper");
         if (lastScrollTop > top) {
-            // console.log('top');
             header.classList.remove("header__hidden");
             header.classList.add("header__fixed");
             if (window.pageYOffset < 200) {
@@ -25,7 +28,6 @@ window.onscroll = function() {
                 header.style.transition = "0.5s";
             }
         } else if (lastScrollTop < top) {
-            // console.log('down');
             if (window.pageYOffset > 200) {
                 header.classList.remove("header__fixed");
                 header.classList.add("header__hidden");
@@ -37,22 +39,47 @@ window.onscroll = function() {
     }
 }
 
+// ============== функция определения цвета хедара при хагрузке страницы ================
+// ======================================================================================
+function thinHeaderWhenLoad(){
+    console.log("jhgjhgjhg", window.pageYOffset);
+    const header = document.querySelector(".header__top-wrapper");
+    if (window.pageYOffset > 200) {
+        header.style.backgroundColor = "#29282ff6";
+    }
+}
+
+
 // =========== Навигация по сайту =============
 // ======================================================================================
-// const anchors = document.querySelectorAll('a[href*= "#"]')
-// for(let anchor of anchors){
-//     anchor.addEventListener("click", function(event){
-//         event.preventDefault();
-//         const blockId = anchor.getAttribute("href");
-//         document.querySelector('' + blockId).scrollIntoView({
-//         behavior: "smooth",
-//         block: "center" 
-//         })
-//         mobileNavContainer.classList.remove('mobile-nav--active');
-//         document.querySelector('body').classList.remove("no-scroll");
-//         menuToggle.classList.remove('menu-icon-active');
-//     })
-// }
+$(document).ready(function(){
+    // Добавить плавную прокрутку до всех ссылок
+    $("a").on('click', function(event) {
+  
+      // Убедись в этом что .hash имеет значение перед переопределением поведения по умолчанию
+      if (this.hash !== "") {
+        // Запретить поведение щелчка якоря по умолчанию
+        event.preventDefault();
+  
+        // Хранить хэш
+        var hash = this.hash;
+  
+        // Использование метода animate() jQuery для добавления плавной прокрутки страницы
+        // Необязательное число (800) указывает количество миллисекунд, необходимых для прокрутки до указанной области
+        $('html, body').animate({
+          scrollTop: $(hash).offset().top
+        }, 500, function(){
+  
+          // Добавить хэш (#) для URL-адреса после завершения прокрутки (поведение щелчка по умолчанию)
+          window.location.hash = hash;
+        });
+        mobileNavContainer.classList.remove('mobile-nav--active');
+        document.querySelector('body').classList.remove("no-scroll");
+        menuToggle.classList.remove('menu-icon-active');
+      } // Конец, если
+    });
+  });
+
 
 // ===============  Подключение сортировки элементов в галерее по клику меню ============
 // ======================================================================================
@@ -259,51 +286,4 @@ $(document).ready(function(){
 });
 
 
-// ================    Функция перенаправления кнопки заказать на форму обратной связи     ====================
-// ============================================================================================================
-// const btns = document.querySelectorAll('.card__btn-order');
-// let btn;
-// for(btn of btns){
-//     btn.addEventListener("click", function(event){
-//         event.preventDefault();
-//         document.querySelector("#contacts").scrollIntoView({
-//             behavior: "smooth",
-//             block: "center" 
-//         });
-//     });
-// };
 
-// ================    Функция скролла вниз при нажатии на стрелку вниз     ====================
-// =============================================================================================
-// document.querySelector('.header__scroll-circle').addEventListener("click", function(event){
-//     event.preventDefault();
-//     document.querySelector("#portfolio").scrollIntoView({
-//         behavior: "smooth",
-//         block: "center" 
-//     });
-// });
-
-$(document).ready(function(){
-    // Добавить плавную прокрутку до всех ссылок
-    $("a").on('click', function(event) {
-  
-      // Убедись в этом что .hash имеет значение перед переопределением поведения по умолчанию
-      if (this.hash !== "") {
-        // Запретить поведение щелчка якоря по умолчанию
-        event.preventDefault();
-  
-        // Хранить хэш
-        var hash = this.hash;
-  
-        // Использование метода animate() jQuery для добавления плавной прокрутки страницы
-        // Необязательное число (800) указывает количество миллисекунд, необходимых для прокрутки до указанной области
-        $('html, body').animate({
-          scrollTop: $(hash).offset().top
-        }, 800, function(){
-  
-          // Добавить хэш (#) для URL-адреса после завершения прокрутки (поведение щелчка по умолчанию)
-          window.location.hash = hash;
-        });
-      } // Конец, если
-    });
-  });
