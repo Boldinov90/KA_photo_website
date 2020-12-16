@@ -1155,6 +1155,7 @@ body {
   bottom: 30px;
   cursor: pointer;
   transition: 0.3s;
+  text-decoration: none;
 }
 
 .prices .prices__slider-wrapper .prices-slider .card .card__btn-order:hover {
