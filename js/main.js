@@ -37,7 +37,6 @@ window.onscroll = function() {
 
 // ============== функция определения цвета хедара при хагрузке страницы ================
 // ======================================================================================
-
 window.onload = function() { 
     window.onload = onload(); 
     function onload(e) { 
@@ -48,28 +47,22 @@ window.onload = function() {
     } 
 }
 
-
-
 // =========== Навигация по сайту =============
 // ======================================================================================
 $(document).ready(function(){
     // Добавить плавную прокрутку до всех ссылок
     $("a").on('click', function(event) {
-  
       // Убедись в этом что .hash имеет значение перед переопределением поведения по умолчанию
       if (this.hash !== "") {
         // Запретить поведение щелчка якоря по умолчанию
         event.preventDefault();
-  
         // Хранить хэш
         var hash = this.hash;
-  
         // Использование метода animate() jQuery для добавления плавной прокрутки страницы
         // Необязательное число (800) указывает количество миллисекунд, необходимых для прокрутки до указанной области
         $('html, body').animate({
           scrollTop: $(hash).offset().top
         }, 500, function(){
-  
           // Добавить хэш (#) для URL-адреса после завершения прокрутки (поведение щелчка по умолчанию)
           window.location.hash = hash;
         });
@@ -79,7 +72,6 @@ $(document).ready(function(){
       } // Конец, если
     });
   });
-
 
 // ===============  Подключение сортировки элементов в галерее по клику меню ============
 // ======================================================================================
@@ -98,17 +90,14 @@ var config = {
 };
 var mixer = mixitup('.portfolio__gallery-items', config);
 
-
 // Раскрытие всего контента в галерее
 // ======================================================================================
 document.querySelector('.portfolio__btn-lookAll').addEventListener("click", function(e) {
     // Отмена стандартного поведения браузера
     e.preventDefault();
-
     document.querySelector('.portfolio__gallery-items').classList.add("gallery-items__allContent");
     document.querySelector('.portfolio__btn-back').classList.remove("hidden-btn");
     document.querySelector('.portfolio__btn-lookAll').classList.add("hidden-btn");
-
 });
 
 // Cкрытие всего контента в галерее
@@ -122,7 +111,7 @@ document.querySelector('.portfolio__btn-back').addEventListener("click", functio
     document.getElementById("portfolio").scrollIntoView({
         behavior: "smooth",
         block: "center" 
-        });
+    });
 });
 
 // ====================     Раскрытие и скрытие всего контента в "О СЕБЕ"    ==================
