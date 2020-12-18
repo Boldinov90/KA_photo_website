@@ -170,7 +170,7 @@
                     }
                 }
                 .card__btn-order {
-                    width: 200px;
+                    min-width: 200px;
                     height: 50px;
                     border: 2px solid #FFC27B;
                     box-sizing: border-box;
@@ -192,6 +192,7 @@
                     // margin-top: 39px;
                     position: absolute;
                     bottom: 30px;
+                    padding: 10px;
                     cursor: pointer;
                     transition: 0.3s;
                     text-decoration: none;
@@ -201,7 +202,7 @@
                         transition: 0.3s;
                     }
                     @media screen and(max-width: 1180px) {
-                        width: 176px;
+                        min-width: 176px;
                         height: 44px;
                         margin-top: 23px;
                     }
