@@ -1,19 +1,12 @@
 *, *::before, *::after {
   box-sizing: border-box;
-//   scroll-behavior: smooth;
-
 }
 body{
     background-color: #35373E;
-    // overflow-y: scroll;
-
 }
 .container-overflow{
     max-width: 1920px;
-    // padding-left: 15px;
-    // padding-right: 15px;
     margin: 0 auto;
-    // position: relative;
 }
 .container{
     max-width: 1200px;
